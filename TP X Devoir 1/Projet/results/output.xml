@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.6 on win32)" generated="2026-10-19T17:05:00.942910" rpa="false" schemaversion="5">
+<suite id="s1" name="Authentication" source="C:\Users\bilal\Downloads\projet-rf\projet-rf\testcases\authentication.robot">
+<test id="s1-t1" name="Cas1 - Login correct et mot de passe incorrect" line="10">
+<kw name="Ouvrir La Page De Connexion" owner="authentication" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-19T17:05:01.329535" level="INFO">Opening browser 'edge' to base url 'http://18.201.83.167:8080'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-19T17:05:01.329535" elapsed="44.996213"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-19T17:05:46.326741" elapsed="0.053995"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-10-19T17:05:56.670299" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-19T17:05:56.670886" level="FAIL">Element 'id=j_username' not visible after 10 seconds.</msg>
+<arg>${id_textbox_username}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-10-19T17:05:46.381738" elapsed="10.290919">Element 'id=j_username' not visible after 10 seconds.</status>
+</kw>
+<doc>Ouvre le navigateur sur l'application et attend le formulaire.</doc>
+<status status="FAIL" start="2026-10-19T17:05:01.328501" elapsed="55.344771">Element 'id=j_username' not visible after 10 seconds.</status>
+</kw>
+<kw name="Fermer Le Navigateur" owner="authentication" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-19T17:05:56.673890" elapsed="2.341823"/>
+</kw>
+<status status="PASS" start="2026-10-19T17:05:56.673890" elapsed="2.341823"/>
+</kw>
+<tag>auth</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2026-10-19T17:05:01.327539" elapsed="57.688174">Setup failed:
+Element 'id=j_username' not visible after 10 seconds.</status>
+</test>
+<test id="s1-t2" name="Cas2 - Login incorrect et mot de passe incorrect" line="15">
+<kw name="Ouvrir La Page De Connexion" owner="authentication" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-19T17:05:59.017749" level="INFO">Opening browser 'edge' to base url 'http://18.201.83.167:8080'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-19T17:05:59.017749" elapsed="14.145168"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-10-19T17:06:13.163433" elapsed="0.042107"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-10-19T17:06:23.433282" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-10-19T17:06:23.433282" level="FAIL">Element 'id=j_username' not visible after 10 seconds.</msg>
+<arg>${id_textbox_username}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-10-19T17:06:13.205540" elapsed="10.228744">Element 'id=j_username' not visible after 10 seconds.</status>
+</kw>
+<doc>Ouvre le navigateur sur l'application et attend le formulaire.</doc>
+<status status="FAIL" start="2026-10-19T17:05:59.016713" elapsed="24.417571">Element 'id=j_username' not visible after 10 seconds.</status>
+</kw>
+<kw name="Fermer Le Navigateur" owner="authentication" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-10-19T17:06:23.434284" elapsed="2.403775"/>
+</kw>
+<status status="PASS" start="2026-10-19T17:06:23.434284" elapsed="2.403775"/>
+</kw>
+<tag>auth</tag>
+<tag>sanity</tag>
+<status status="FAIL" start="2026-10-19T17:05:59.016713" elapsed="26.821346">Setup failed:
+Element 'id=j_username' not visible after 10 seconds.</status>
+</test>
+<doc>Cas de test de la page d'authentification.
+Ce fichier dit QUOI tester, sans détail technique.</doc>
+<status status="FAIL" start="2026-10-19T17:05:00.944936" elapsed="84.894125"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="2" skip="0">auth</stat>
+<stat pass="0" fail="1" skip="0">sanity</stat>
+<stat pass="0" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Authentication" id="s1" pass="0" fail="2" skip="0">Authentication</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
